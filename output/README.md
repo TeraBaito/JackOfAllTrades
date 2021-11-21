@@ -1,0 +1,1 @@
+Output folder, here goes the image. This README is just here so that the folder can be uploaded to GitHub.
