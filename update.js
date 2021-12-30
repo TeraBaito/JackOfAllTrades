@@ -21,6 +21,7 @@ let xx = 50, yy = 90;
     const playcounts = await require('./getPlaycounts')(token, '16775174');
     const statuses = (readFileSync('statusRaw.txt', { encoding: 'utf-8' }))
         .split(newLines)
+        .filter(p => Number(p))
         .map((e, i) => {
             if (playcounts[i] > 5000) return { t: 'complete', c: '#35a200' };
             else if (e == '1') return { t: 'in progress', c: '#0000ff'};
