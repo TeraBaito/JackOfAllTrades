@@ -17,13 +17,11 @@ ctx.fillStyle = '#ffffff';
 let xx = 50, yy = 90;
 
 (async function () {
-    const newLines = process.platform == 'win32' ? '\r\n' : '\n'; // fuck windows
     const playcounts = await require('./getPlaycounts')(token, '16775174');
-    const statuses = (readFileSync('statusRaw.txt', { encoding: 'utf-8' }))
-        .split(newLines)
+    const statuses = (JSON.parse(readFileSync('status.json', { encoding: 'utf-8' })))
         .map((e, i) => {
             if (playcounts[i] > 5000) return { t: 'complete', c: '#35a200' };
-            else if (e == '1') return { t: 'in progress', c: '#0000ff'};
+            else if (e) return { t: 'in progress', c: '#0000ff'};
             else return { t: 'unvisited', c: '#a00000' };
         });
 

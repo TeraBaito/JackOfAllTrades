@@ -2,3 +2,10 @@
 .env
 .eslintrc.json
 package-lock.json
+
+# Manual repeat cronjob idk why it's there
+repeat.js
+
+# Every file except the README
+!output/README.md
+output/*
