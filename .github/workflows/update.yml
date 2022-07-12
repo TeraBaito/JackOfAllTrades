@@ -1,7 +1,7 @@
 name: Update Image
 on:
   schedule:
-    - cron: '0 18 * * *' # trigger daily at 00:00 CST
+    - cron: '0 6 * * *' # trigger daily at 00:00 CST
   workflow_dispatch:
 
 jobs:
