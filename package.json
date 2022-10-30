@@ -1,7 +1,7 @@
 {
   "dependencies": {
     "axios": "^0.24.0",
-    "canvas": "^2.10.1",
+    "canvas": "^2.10.2",
     "dotenv": "^10.0.0"
   }
 }
